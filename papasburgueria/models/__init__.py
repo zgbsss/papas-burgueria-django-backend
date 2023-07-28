@@ -1,4 +1,4 @@
 from .hamburguer import Hamburguer
-from .ingredientes import Ingredientes
-from .refrigerantes import Refrigerantes
+from .ingrediente import Ingrediente
+from .refrigerante import Refrigerante
 from .lucro import Lucro
