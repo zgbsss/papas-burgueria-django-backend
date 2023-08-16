@@ -10,3 +10,4 @@ class HamburguerViewSet(ModelViewSet):
         elif self.action == "retrieve":
             return HamburguerDetailSerializer
         return HamburguerSerializer
+# 

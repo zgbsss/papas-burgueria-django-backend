@@ -5,3 +5,4 @@ from papasburgueria.serializers import RefrigeranteSerializer
 class RefrigeranteViewSet(ModelViewSet):
     queryset = Refrigerante.objects.all()
     serializer_class = RefrigeranteSerializer
+# 
