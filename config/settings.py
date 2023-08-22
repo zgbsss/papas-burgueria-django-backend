@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "corsheaders",
+    "usuario",
     "papasburgueria",
     "rest_framework",
     "rest_framework_simplejwt",
@@ -136,3 +137,5 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication'
     ]
 }
+
+AUTH_USER_MODEL = "usuario.Usuario"
