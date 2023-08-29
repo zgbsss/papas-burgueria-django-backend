@@ -1,10 +1,10 @@
 from django.contrib import admin
-from papasburgueria.models import Hamburguer, Ingrediente, Lucro, Refrigerante, Compra, ItensCompra
+from papasburgueria.models import Hamburguer, Ingrediente, Lucro, Bebida, Compra, ItensCompra
 
 admin.site.register(Hamburguer)
 admin.site.register(Ingrediente)
 admin.site.register(Lucro)
-admin.site.register(Refrigerante)
+admin.site.register(Bebida)
 
 class ItensCompraInline(admin.TabularInline):
     model = ItensCompra

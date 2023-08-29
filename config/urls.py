@@ -17,12 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework.routers import DefaultRouter
-from papasburgueria.views import HamburguerViewSet, RefrigeranteViewSet, IngredienteViewSet, LucroViewSet
+from papasburgueria.views import HamburguerViewSet, BebidaViewSet, IngredienteViewSet, LucroViewSet
 from usuario.router import router as usuario_router
 
 router = DefaultRouter()
 router.register(r"hamburgueres", HamburguerViewSet)
-router.register(r"refrigerantes", RefrigeranteViewSet)
+router.register(r"refrigerantes", BebidaViewSet)
 router.register(r"ingredientes", IngredienteViewSet)
 router.register(r"lucros", LucroViewSet)
 
