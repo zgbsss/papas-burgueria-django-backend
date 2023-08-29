@@ -1,4 +1,4 @@
 from .hamburguer import HamburguerViewSet
-from .refrigerante import RefrigeranteViewSet
+from .bebida import BebidaViewSet
 from .ingrediente import IngredienteViewSet
 from .lucro import LucroViewSet

@@ -1,4 +1,4 @@
 from .hamburguer import HamburguerSerializer, HamburguerDetailSerializer, HamburguerListSerializer
-from .refrigerante import RefrigeranteSerializer
+from .bebida import BebidaSerializer
 from .ingrediente import IngredienteSerializer
 from .lucro import LucroSerializer
