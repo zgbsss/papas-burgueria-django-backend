@@ -1,19 +1,19 @@
 from rest_framework.serializers import ModelSerializer, CharField, SerializerMethodField
-from papasburgueria.models import Compra, ItensCompra
+from papasburgueria.models import Comanda, ItensComanda
 
-class ItensCompraSerializer(ModelSerializer):
+class ItensComandaSerializer(ModelSerializer):
     total = SerializerMethodField()
     class Meta:
-        model = ItensCompra
+        model = ItensComanda
         fields = ["hamburguer", "quantidade"]
         depth = 2
     def get_total(self, obj):
         return obj.hamburguer.preco * obj.quantidade
 
-class CompraSerializer(ModelSerializer):
+class ComandaSerializer(ModelSerializer):
     usuario = CharField(source="usuario.email", read_only=True)
     status = CharField(source="get_status_display", read_only=True)
-    itens = ItensCompraSerializer(many=True, read_only=True)
+    itens = ItensComandaSerializer(many=True, read_only=True)
     class Meta:
-        model = Compra
+        model = Comanda
         fields = "__all__"

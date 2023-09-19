@@ -12,7 +12,7 @@ authors = [
     {name = "Gabriela Saraiva Soares", email = "gabrielasaraiva.04@gmail.com"},
 ]
 dependencies = [
-    "django>=4.2.4",
+    "django>=4.2.5",
     "djangorestframework>=3.14.0",
     "django-cors-headers>=4.2.0",
     "djangorestframework-simplejwt>=5.2.2",
