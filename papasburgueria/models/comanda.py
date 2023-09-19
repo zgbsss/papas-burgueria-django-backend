@@ -12,7 +12,7 @@ class Comanda(models.Model):
 
 class ItensComanda(models.Model):
     comanda = models.ForeignKey(Comanda, on_delete=models.CASCADE, related_name="itens")
-    ingrediente = models.ForeignKey(Ingrediente, on_delete=models.PROTECT, related_name="+")
-    hamburguer = models.ForeignKey(Hamburguer, on_delete=models.PROTECT, related_name="+")
-    bebida = models.ForeignKey(Bebida, on_delete=models.PROTECT, related_name="+")
+    ingrediente = models.ManyToManyField(Ingrediente, related_name="+")
+    hamburguer = models.ManyToManyField(Hamburguer, related_name="+")
+    bebida = models.ManyToManyField(Bebida, related_name="+")
     quantidade = models.IntegerField(default=1)
