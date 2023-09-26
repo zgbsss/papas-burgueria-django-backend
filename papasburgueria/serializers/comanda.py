@@ -2,11 +2,11 @@ from rest_framework.serializers import ModelSerializer, CharField, SerializerMet
 from papasburgueria.models import Comanda, ItensComanda
 
 class ItensComandaSerializer(ModelSerializer):
-    total = SerializerMethodField()
     class Meta:
         model = ItensComanda
         fields = ["hamburguer", "quantidade"]
         depth = 2
+        total = SerializerMethodField()
     def get_total(self, obj):
         return obj.hamburguer.preco * obj.quantidade
 

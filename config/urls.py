@@ -28,7 +28,7 @@ router.register(r"hamburgueres", HamburguerViewSet)
 router.register(r"bebidas", BebidaViewSet)
 router.register(r"ingredientes", IngredienteViewSet)
 router.register(r"lucros", LucroViewSet)
-router.register(r"compras", ComandaViewSet)
+router.register(r"comanda", ComandaViewSet)
 
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
