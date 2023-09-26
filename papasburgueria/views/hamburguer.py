@@ -1,6 +1,7 @@
 from rest_framework.viewsets import ModelViewSet
 from papasburgueria.models import Hamburguer
 from papasburgueria.serializers import HamburguerSerializer, HamburguerDetailSerializer, HamburguerListSerializer
+from rest_framework.permissions import IsAuthenticated
 
 class HamburguerViewSet(ModelViewSet):
     queryset = Hamburguer.objects.all()
@@ -10,4 +11,5 @@ class HamburguerViewSet(ModelViewSet):
         elif self.action == "retrieve":
             return HamburguerDetailSerializer
         return HamburguerSerializer
-# 
+    
+permission_classes = [IsAuthenticated]
