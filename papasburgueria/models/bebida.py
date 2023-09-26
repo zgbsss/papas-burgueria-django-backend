@@ -10,4 +10,4 @@ class Bebida(models.Model):
     
 
     def __str__(self):
-        return f"{self.nome}, {self.descricao}, {self.tipo}, {self.preco}"
+        return f"{self.nome} - {self.descricao} - {self.tipo} - {self.preco}"
