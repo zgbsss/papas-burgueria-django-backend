@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django_extensions",
+    "drf_spectacular",
     "corsheaders",
     "usuario",
     "papasburgueria",
@@ -116,7 +117,9 @@ CORS_ALLOW_ALL_ORIGINS = True
 REST_FRAMEWORK = {
     # "DEFAULT_PERMISSION_CLASSES": [
     #     "rest_framework.permissions.DjangoModelPermissions",
+    
     # ],
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
     "DEFAULT_AUTHENTICATION_CLASSES": (
          "rest_framework_simplejwt.authentication.JWTAuthentication",
     )
@@ -139,3 +142,11 @@ else:
     MEDIA_URL = f"http://{MY_IP}:19003/media/"
 
 print (MODE, MEDIA_URL)
+
+# Spectacular Settings
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Papas Burgueria API",
+    "DESCRIPTION": "API para um sistema de autoatendimento gerenciamento",
+    "VERSION": "1.0.0",
+}
