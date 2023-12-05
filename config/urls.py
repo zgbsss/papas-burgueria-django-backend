@@ -29,6 +29,7 @@ from papasburgueria.views import (
 )
 from usuario.router import router as usuario_router
 from uploader.router import router as uploader_router
+from usuario.views import UsuarioViewSet
 
 router = DefaultRouter()
 router.register(r"hamburgueres", HamburguerViewSet)
@@ -36,6 +37,7 @@ router.register(r"bebidas", BebidaViewSet)
 router.register(r"ingredientes", IngredienteViewSet)
 router.register(r"lucros", LucroViewSet)
 router.register(r"comandas", ComandaViewSet)
+router.register(r"usuarios", UsuarioViewSet)
 
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,

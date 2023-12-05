@@ -9,6 +9,9 @@ class Comanda(models.Model):
         PAGO = (3, "Pago",)
     usuario = models.ForeignKey(Usuario, on_delete=models.PROTECT, related_name="comandas")
     status = models.IntegerField(choices=StatusComanda.choices, default=StatusComanda.COMANDA)
+    @property
+    def total(self):
+        return sum(item.livro.preco * item.quantidade for item in self.itens.all())
 
 class ItensComanda(models.Model):
     comanda = models.ForeignKey(Comanda, on_delete=models.CASCADE, related_name="itens")
