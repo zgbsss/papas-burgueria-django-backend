@@ -18,3 +18,9 @@ class ComandaSerializer(ModelSerializer):
     class Meta:
         model = Comanda
         fields = "__all__"
+
+class CriarEditarComandaSerializer(ModelSerializer):
+    itens = ItensComandaSerializer(many=True)
+    class Meta:
+        model = Comanda
+        fields = ("usuario", "itens")

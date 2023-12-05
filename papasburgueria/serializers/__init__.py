@@ -2,4 +2,4 @@ from .hamburguer import HamburguerSerializer, HamburguerDetailSerializer, Hambur
 from .bebida import BebidaSerializer
 from .ingrediente import IngredienteSerializer
 from .lucro import LucroSerializer
-from .comanda import ComandaSerializer
+from .comanda import ComandaSerializer, CriarEditarComandaSerializer
