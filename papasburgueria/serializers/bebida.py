@@ -4,7 +4,6 @@ from uploader.models import Image
 from uploader.serializers import ImageSerializer
 
 class BebidaSerializer(ModelSerializer):
-    queryset = Bebida.objects.all()
     capa_attachment_key = SlugRelatedField(
         source="imagem",
         queryset=Image.objects.all(),

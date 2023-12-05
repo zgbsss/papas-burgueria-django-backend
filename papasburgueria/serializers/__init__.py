@@ -1,5 +1,5 @@
 from .hamburguer import HamburguerSerializer, HamburguerDetailSerializer, HamburguerListSerializer
 from .bebida import BebidaSerializer, BebidaDetailSerializer
-from .ingrediente import IngredienteSerializer
+from .ingrediente import IngredienteSerializer, IngredienteDetailSerializer
 from .lucro import LucroSerializer
 from .comanda import ComandaSerializer, CriarEditarComandaSerializer
