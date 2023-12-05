@@ -10,5 +10,3 @@ class ComandaViewSet(ModelViewSet):
         if self.action == "create" or self.action == "update":
             return CriarEditarComandaSerializer
         return ComandaSerializer
-
-# aula 30, corrigir erro cm create
