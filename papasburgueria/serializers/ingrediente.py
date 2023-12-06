@@ -16,7 +16,7 @@ class IngredienteSerializer(ModelSerializer):
         fields = "__all__"
 
 class IngredienteDetailSerializer(ModelSerializer):
-    capa = ImageSerializer(required=False)
+    imagem = ImageSerializer(required=False)
     class Meta:
         model = Ingrediente
         fields = "__all__"
